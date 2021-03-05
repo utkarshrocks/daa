@@ -30,31 +30,63 @@ https://github.com/medhabalani/daa.git
 
 Run the code
 ```
-g++ filename.cpp -std=c++14
+g++ <filename>.cpp -std=c++14
 ./a.out
 ```
 Input format -
 
 ```
-Input consists of three lines.
-First line contains a single integer n, the size of the array.
-Second line contains n space seperated integers denoting the elements of array.
-Element to be searched
+Input consists of two lines.
+First line contains two integers n and key denoting the size of array and element to be searched respectively.
+Second line contains n space seperated integers denoting the elements of array in non decreasing order.
 
 ```
 Output format -
 
 ```
-Index of the key element to be searched and -1 if that element does not exist.
+* First line contains Zero based Index of the key element to be searched and -1 if that element does not exist using 
+  standard binary search.
+* Second line contains number of iterations occuring in standard binary search.
+* Third line contains Zero based Index of the key element to be searched and -1 if that element does not exist using 
+  improved binary search.
+* Fourth line contains number of iterations occuring in improved binary search.
 ```
 Input
 
 ```
+Test Case #1
+10 30
+5 10 15 30 35 70 80 120 150 200
+
+Test Case #2
+10 2
+1 1 1 1 1 1 1 1 1 1
+
+Test Case #3
+4 3
+3 4 5 6 
 
 ```
 Output
 
-``` 
+```
+Test Case #1
+index: 3
+No. of iterations in binary search: 4
+index: 3
+No. of iterations in improved binary search: 2
+
+Test Case #2
+index: -1
+No. of iterations in binary search: 4
+index: -1
+No. of iterations in improved binary search: 3
+
+Test Case #3
+index: 0
+No. of iterations in binary search: 2
+index: 0
+No. of iterations in improved binary search: 1
 
 ```
 ---
